@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  background: #111827;
+  color: white;
+  padding: 16px 24px;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-inner h2 {
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  border: 1px solid #4b5563;
+  background: transparent;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 7px;
+}
+
+.nav-btn.active {
+  background: white;
+  color: #111827;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.page {
+  width: 100%;
+}
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #6b7280;
+}
+
+.page-heading h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.page-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.admin-card,
+.info-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.admin-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.admin-card textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 14px;
+  outline: none;
+}
+
+.admin-card textarea:focus {
+  border-color: #111827;
+}
+
+.character-count {
+  text-align: right;
+  color: #6b7280;
+  font-size: 13px;
+  margin: 6px 0 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #111827;
+  color: white;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.success-box,
+.error-box,
+.status-box,
+.empty-state {
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+.success-box {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.error-box {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.status-box,
+.empty-state {
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.info-card h3 {
+  margin-top: 0;
+}
+
+.info-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.connection-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecfdf5;
+  color: #047857;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.online-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.history-header h2 {
+  margin: 0 0 5px;
+}
+
+.history-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 17px;
+}
+
+.notification-card > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.notification-card p {
+  margin: 10px 0 0 34px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.notification-icon {
+  font-size: 18px;
+}
+
+@media (max-width: 650px) {
+  .nav-inner,
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-inner {
+    gap: 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 26px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+  }
+
+  .nav-btn {
+    flex: 1;
+  }
+}
+
+
+.toast {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: min(360px, calc(100vw - 40px));
+  background: #111827;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideIn 0.35s ease;
+}
+
+.toast strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.toast p {
+  margin: 0;
+  color: #e5e7eb;
+  line-height: 1.4;
+}
+
+.toast button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+  height: 25px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
