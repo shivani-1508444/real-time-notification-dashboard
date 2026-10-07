@@ -1,1 +1,20 @@
-/* Toast styles are currently included in global.css for simplicity. */
+/* Extended Toast styles */
+.toast.success {
+  background: #047857;
+  color: white;
+}
+
+.toast.error {
+  background: #dc2626;
+  color: white;
+}
+
+.toast.warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.toast.info {
+  background: #3b82f6;
+  color: white;
+}
